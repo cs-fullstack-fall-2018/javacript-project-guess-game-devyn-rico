@@ -7,7 +7,7 @@ function playLvl2() {
     theGo.onclick = function () {
         // Get random number of targets and do setup
         var targetKount = 5;
-        var targetTime = 8000;
+        var targetTime = 5000;
         // No start the game!
         setUpTargetsAndPlay(targetKount, targetTime);
     };

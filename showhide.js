@@ -7,7 +7,7 @@ function letsRock() {
     theGo.onclick = function () {
         // Get random number of targets and do setup
         var targetKount = 5;
-        var targetTime = 10000;
+        var targetTime = 8000;
         // No start the game!
         setUpTargetsAndPlay(targetKount, targetTime);
     };
