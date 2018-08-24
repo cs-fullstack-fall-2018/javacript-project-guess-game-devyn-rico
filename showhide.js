@@ -6,23 +6,37 @@ function letsRock() {
     var theGo = document.getElementById("goGetIt");
     theGo.onclick = function () {
         // Get random number of targets and do setup
-        var targetKount = document.getElementById("numberOfTargets").value;
-        var targetTime = document.getElementById("displayTime").value;
+        var targetKount = 5;
+        var targetTime = 10000;
         // No start the game!
         setUpTargetsAndPlay(targetKount, targetTime);
     };
 }
+
+
+
+
+
 // Utility function to get a random table cell number
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
-};
+}
+
+
+
+
 
 // This function gets called if player hits a target
 function clickedTarget() {
     // Right now, just updates a count.
     // Could use some player feedback here
     hits += 1;
-};
+}
+
+
+
+
+
 
 // The main function that sets up targets and starts a game
 function setUpTargetsAndPlay(numberOfTargets, displayTimeMs) {
@@ -53,8 +67,7 @@ function setUpTargetsAndPlay(numberOfTargets, displayTimeMs) {
         var imgID = "img" + targetNum;
 
         $('#' + tdID).on("click", clickedTarget).append("<img id = " + imgID + " class= 'targetImg' src='bird.png'>");
-        $('#' + imgID).delay(2000).show(0);
         $('#' + imgID).delay(displayTimeMs).hide(0);
     }
 
-};
+}
