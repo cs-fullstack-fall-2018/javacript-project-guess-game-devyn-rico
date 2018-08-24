@@ -1,6 +1,6 @@
 table {
     /* Use whatever background image (or images) you like */
-    background: url("") no-repeat;
+    background: url("https://food.fnr.sndimg.com/content/dam/images/food/fullset/2010/5/1/0/0039592F3_beer-can-chicken_s4x3.jpg.rend.hgtvcom.616.462.suffix/1382539274625.jpeg") no-repeat;
     table-layout: fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -12,4 +12,13 @@ table {
 td {
     width: 100px;
     height: 100px;
+}
+p{
+    text-align: center;
+}
+.jumbotron{
+    background-color: indianred;
+}
+body{
+    background-color: black;
 }

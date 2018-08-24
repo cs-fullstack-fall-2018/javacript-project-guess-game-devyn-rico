@@ -13,3 +13,12 @@ td {
     width: 100px;
     height: 100px;
 }
+body{
+    background-color: black;
+}
+.jumbotron{
+    background-color: orange;
+}
+p{
+    text-align: center;
+}
