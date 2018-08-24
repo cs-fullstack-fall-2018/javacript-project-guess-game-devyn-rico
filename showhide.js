@@ -34,6 +34,12 @@ function clickedTarget() {
 }
 
 
+function cleanUp() {
+    $("td").off("click");
+    $("table").off("click");
+    $(".targetImg").remove();
+
+}
 
 
 
@@ -43,6 +49,8 @@ function setUpTargetsAndPlay(numberOfTargets, displayTimeMs) {
     clicks = 0;
     targets = numberOfTargets;
     hits = 0;
+    // Clean up from prior game
+    cleanUp();
 
     // Setup click detection for the entire table
     $("table").on("click", function () {
@@ -51,14 +59,11 @@ function setUpTargetsAndPlay(numberOfTargets, displayTimeMs) {
         // alert("clicked. Max = " + clicks);
         if (clicks == targets) {
             alert("No more clicks! You got " + hits + " out of " + targets);
-            // Turn off click detection
-            $("td").off("click");
-            $("table").off("click");
-            $(".targetImg").remove();
+           cleanUp();
         }
     });
 
-    console.log("Selecting " + targets + " targets")
+    console.log("Selecting " + targets + " targets");
     // Get the number of targets specified and randomly picks cells to display them in for the target table
     for (var x = 0; x < targets; x++) {
         var targetNum = getRandomInt(1, 50); // Pick a random table cell
